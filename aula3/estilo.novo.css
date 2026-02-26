@@ -1,0 +1,41 @@
+body{
+    background-color: lightgrey;
+}
+
+
+p{
+    color:indigo;
+    size: 18px;
+}
+
+p1{
+    color:darkgreen;
+    size: 25px;
+}
+
+.livros{
+    display: flex;
+    justify-content: space-around;
+}
+
+.videos{
+    display: flex;
+    justify-content: space-around;
+}
+
+table{
+    border-style: dotted;
+    color: red;
+}
+.consulta{
+    border-style: solid;
+    background-color: yellow;
+}
+.final{
+    border-style: solid ;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+width: 2000px;
+}
+
