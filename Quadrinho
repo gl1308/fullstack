@@ -1,0 +1,85 @@
+<tr>
+    <td>Animação</td>
+    <td><a href="Animation.html">Ver Projeto</a></td>
+</tr>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Animação</title>
+    <style>
+        /* CSS: Regras de fundo e centralização */
+        body {
+            background-color: #f0f2f5; /* Cor do fundo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        canvas {
+            background-color: white;
+            border: 2px solid #333;
+            /* O tamanho 300x300 é definido nos atributos do HTML abaixo */
+        }
+
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+
+    <h1>Animação Interativa</h1>
+    
+    <canvas id="meuCanvas" width="300" height="300"></canvas>
+
+    <script>
+        const canvas = document.getElementById('meuCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Configurações da imagem/objeto
+        const img = new Image();
+        img.src = 'https://cdn-icons-png.flaticon.com/512/616/616408.png'; // Exemplo de imagem (pode trocar pela sua)
+        
+        const imgTam = 50; // Tamanho da imagem no canvas
+        let posX = 125;    // Posição inicial (centro)
+        let posY = 125;
+
+        // Função para desenhar no canvas
+        function desenhar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpa o rastro
+            ctx.drawImage(img, posX, posY, imgTam, imgTam);
+            requestAnimationFrame(desenhar);
+        }
+
+        // JS: Controle por posição do mouse
+        canvas.addEventListener('mousemove', (event) => {
+            const rect = canvas.getBoundingClientRect();
+            
+            // Calcula a posição do mouse relativa ao canvas
+            let mouseX = event.clientX - rect.left;
+            let mouseY = event.clientY - rect.top;
+
+            /* JS: Centralizar imagem no ponteiro
+               Subtraímos metade do tamanho da imagem para que o mouse fique no meio dela
+            */
+            let novaPosX = mouseX - (imgTam / 2);
+            let novaPosY = mouseY - (imgTam / 2);
+
+            /* JS: Restrição para a imagem não sair do canvas
+               Usamos Math.max e Math.min para travar as bordas entre 0 e (300 - tamanho da imagem)
+            */
+            posX = Math.max(0, Math.min(novaPosX, canvas.width - imgTam));
+            posY = Math.max(0, Math.min(novaPosY, canvas.height - imgTam));
+        });
+
+        // Inicia a renderização quando a imagem carregar
+        img.onload = () => {
+            desenhar();
+        };
+    </script>
+</body>
+</html>
