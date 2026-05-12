@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-color: #cfcfcf;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+/* TOPO */
+.topo {
+    background-color: #f0dcc2;
+    border: 3px solid navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.topo h1 {
+    color: green;
+    font-size: 50px;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* MENU */
+.menu {
+    background-color: #87c9f5;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: bold;
+}
+
+/* INTRODUÇÃO */
+.introducao {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.introducao h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.introducao p {
+    font-size: 22px;
+    color: purple;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* LIVROS */
+.livros {
+    margin-top: 40px;
+}
+
+.livros h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.cards-livros {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.cards-livros img {
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* VIDEOS */
+.videos {
+    margin-top: 70px;
+}
+
+.videos h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.conteudo-video {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* CONTATOS */
+.contatos {
+    margin-top: 70px;
+}
+
+.contatos h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    border: 4px dashed red;
+    background-color: #ddd;
+}
+
+th,
+td {
+    border: 1px solid brown;
+    padding: 15px;
+}
+
+th {
+    color: red;
+}
+
+/* LINKS */
+.links {
+    width: 500px;
+    margin: 50px auto;
+    background-color: yellow;
+    padding: 20px;
+    text-align: left;
+}
+
+.links ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #f0dcc2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.rodape img {
+    width: 80px;
+}
+
+.texto-rodape {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 20px;
+}
