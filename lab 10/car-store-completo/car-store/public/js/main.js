@@ -1,1 +1,0 @@
-console.log('Sistema de carros carregado');
