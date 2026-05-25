@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<h1>Projetos</h1>
+
+<table>
+<tr>
+<th>Projeto</th>
+<th>Ação</th>
+</tr>
+
+<% projects.forEach(project => { %>
+<tr>
+<td><%= project.name %></td>
+<td>
+<a href="<%= project.link %>">Abrir</a>
+</td>
+</tr>
+<% }) %>
+
+</table>
+
+<%- include('partials/footer') %>
